@@ -29,6 +29,42 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
 
+	
+	/* 1. Reset all list items across the whole site (removes left/right purple margins) */
+    #header nav ul li,
+    #header .content nav ul li,
+    .actions li {
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: 1 1 100% !important;
+    }
+
+    /* 2. Stretch every button link to fill 100% of the horizontal space */
+    #header nav ul li a,
+    #header .content nav ul li a,
+    .actions li a,
+    .actions li a.button {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        height: 100% !important;
+        min-height: 4.5rem !important;
+        padding: 1rem 1.5rem !important;
+        margin: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    /* 3. Full hover background highlight for all main header buttons */
+    #header nav ul li a:hover,
+    #header .content nav ul li a:hover {
+        background-color: rgba(255, 255, 255, 0.075) !important;
+    }
+
 body {
 	line-height: 1;
 }
